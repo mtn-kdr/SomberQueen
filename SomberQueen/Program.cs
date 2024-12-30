@@ -21,7 +21,8 @@ namespace SomberQueen
 
                 TestUserAndEncryption();
 
-                string wallpaperPath = @"C:\Users\metin\source\repos\SomberQueen\SomberQueen\Resources\wallpaper.jpg";
+                string wallpaperPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "wallpaper.jpg");
+
                 if (File.Exists(wallpaperPath))
                 {
                     Wallpaper.SetWallpaper(wallpaperPath);
