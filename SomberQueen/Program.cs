@@ -74,7 +74,7 @@ namespace SomberQueen
             var encryptionService = new EncryptionService(dbHelper);
             var userService = new UserService(dbHelper);
 
-            string folderPath = @"C:\Users\metin\OneDrive\Desktop\cry";
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "cry");
             string password = "securepassword";
 
             byte[] decKey = EncryptionService.GenerateEncryptionKey(password);
